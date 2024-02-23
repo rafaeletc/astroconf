@@ -9,4 +9,20 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- INFO Editorconfig plugin
+  {
+    "gpanders/editorconfig.nvim",
+    tag = "v1.4.0",
+  },
+  -- INFO Todo plugin
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User AstroFile",
+    cmd = { "TodoQuickFix" },
+    keys = {
+      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open ToDos in TeleScope" },
+    },
+  },
 }
