@@ -74,4 +74,34 @@ return {
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
   -- },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = false,
+	        show_hidden_count = true,
+	        hide_dotfiles = false,
+	        hide_gitignored = true,
+	        hide_by_name = {
+	          '.git',
+	          '.DS_Store',
+	          'thumbs.db',
+	        },
+	        never_show = {},
+        },
+      },
+      event_handlers = {
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            -- auto close
+            -- vimc.cmd("Neotree close")
+            -- OR
+            require("neo-tree.command").execute({ action = "close" })
+          end
+        },
+      }
+    }
+  },
 }
