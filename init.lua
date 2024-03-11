@@ -1,3 +1,9 @@
+if vim.g.vscode then
+    -- VSCode extension
+else
+    -- ordinary Neovim
+end
+
 return {
   -- Configure AstroNvim updates
   updater = {
