@@ -86,6 +86,10 @@ return {
         "WhichKeyFloat",
       },
     },
-  }
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.syntax.hlargs-nvim" },
+  { import = "astrocommunity.syntax.vim-cool" },
+  { import = "astrocommunity.syntax.vim-sandwich" },
 }
